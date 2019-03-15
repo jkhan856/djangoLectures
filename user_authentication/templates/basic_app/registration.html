@@ -13,8 +13,11 @@
 
     <form  method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      {{ user_form.as_p }}
-      {{profile_form.as_p}}
+      <table>
+        {{ user_form.as_table }}
+        {{profile_form.as_table}}
+      </table>
+
       <input type="submit" class="btn btn-primary" name="Submit" value="Register">
     </form>
   {% endif %}

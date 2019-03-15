@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
 from basic_app.models import UserProfileInfo
+from bootstrap_datepicker_plus import DatePickerInput
+
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget = forms.PasswordInput())
@@ -10,7 +12,7 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'email', 'password')
 
 class UserProfileInfoForm(forms.ModelForm):
-    date_of_birth = forms.DateField(widget=forms.TextInput(attrs={'class':'datepicker'}))
+    date_of_birth = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
 
     class Meta():
         model = UserProfileInfo

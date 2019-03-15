@@ -8,13 +8,19 @@
   <h1>Please Login</h1>
   <form  action="{% url 'basic_app:user_login'%}" method="post">
     {% csrf_token %}
-    <label for="username">Username</label>
-    <input type="text" name="username" placeholder="Enter Username">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" name="username" placeholder="Enter Username">
+    </div>
 
-    <label for="password">Password</label>
-    <input type="password" name="password">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
 
-    <input type="submit" name="submit" value="Login">
+    <div class="form-group col-xs-3">
+          <input type="submit" class="btn btn-primary" name="submit" value="Login">
+    </div>
 
   </form>
 

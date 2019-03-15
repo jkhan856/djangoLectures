@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>{{ register }}</h1>
+        <form  method="POST">
+          {{form.as_p}}
+          {% csrf_token %}
+          <input type="submit" class="btn btn-primary" name="Submit" value="Submit">
+        </form>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
